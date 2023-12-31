@@ -56,7 +56,7 @@
         <jdk.version>17</jdk.version>
         <jdk-release.version>17</jdk-release.version>
         <encoding.type>UTF-8</encoding.type>
-        <maven-compiler-plugin.version>3.12.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
         <maven-clean-plugin.version>3.3.2</maven-clean-plugin.version>
         <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
         <maven-install-plugin.version>3.1.1</maven-install-plugin.version>
