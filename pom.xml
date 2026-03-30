@@ -82,7 +82,7 @@
         <repository>
             <id>snapshots</id>
             <name>Snapshot Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <url>https://central.sonatype.com/repository/maven-snapshots</url>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
@@ -101,7 +101,7 @@
         <pluginRepository>
             <id>snapshots-plugins</id>
             <name>Snapshot Plugin Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <url>https://central.sonatype.com/repository/maven-snapshots</url>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
