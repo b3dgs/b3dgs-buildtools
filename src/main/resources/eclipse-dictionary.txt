@@ -257,3 +257,9 @@ payload
 invincibility
 multiplayer
 fov
+dist
+prefab
+prefabs
+mx
+oy
+farest
