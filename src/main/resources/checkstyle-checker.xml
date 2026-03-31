@@ -30,7 +30,7 @@
     </module>
     <module name="JavadocVariable">
       <property name="severity" value="error"/>
-      <property name="excludeScope" value="anoninner"/>
+      <property name="accessModifiers" value="protected"/>
     </module>
     <module name="JavadocStyle">
       <property name="severity" value="error"/>
