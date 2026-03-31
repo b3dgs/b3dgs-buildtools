@@ -51,8 +51,8 @@ jobs:
      - name: Import GPG key
        uses: crazy-max/ghaction-import-gpg@2dc316deee8e90f13e1a351ab510b4d5bc0c82cd
        with:
-         gpg_private_key: "$GPG_KEY"
-         passphrase: "$GPG_PASS"
+         gpg_private_key: $GPG_KEY
+         passphrase: $GPG_PASS
 
      - name: Compile
        run: mvn clean deploy -U -Dgpg.passphrase="$GPG_PASS" -Psign
