@@ -16,8 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       JDK_VERSION: 17
-      GPG_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-      GPG_PASS: ${{ secrets.GPG_PASSPHRASE }}
 
     steps:
      - name: Checkout
@@ -51,14 +49,15 @@ jobs:
      - name: Import GPG key
        uses: crazy-max/ghaction-import-gpg@2dc316deee8e90f13e1a351ab510b4d5bc0c82cd
        with:
-         gpg_private_key: $GPG_KEY
-         passphrase: $GPG_PASS
+         gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+         passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
      - name: Compile
        run: mvn clean deploy -U -Dgpg.passphrase="$GPG_PASS" -Psign
        env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+          GPG_PASS: ${{ secrets.GPG_PASSPHRASE }}
 
   sonar:
     runs-on: ubuntu-latest
