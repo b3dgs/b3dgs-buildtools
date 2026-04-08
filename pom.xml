@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.b3dgs</groupId>
     <artifactId>b3dgs-buildtools</artifactId>
@@ -53,9 +53,8 @@
     </distributionManagement>
     <properties>
         <maven-minimum.version>3.0</maven-minimum.version>
-        <jdk.version>17</jdk.version>
-        <jdk-release.version>17</jdk-release.version>
         <encoding.type>UTF-8</encoding.type>
+        <jdk.version>17</jdk.version>
         <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
         <maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
         <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
@@ -64,10 +63,10 @@
         <maven-resources-plugin.version>3.5.0</maven-resources-plugin.version>
         <maven-release-plugin.version>3.3.1</maven-release-plugin.version>
         <maven-gpg.version>3.2.8</maven-gpg.version>
-        <maven.compiler.release>${jdk-release.version}</maven.compiler.release>
+        <maven.compiler.release>${jdk.version}</maven.compiler.release>
         <maven.resources.overwrite>false</maven.resources.overwrite>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.build.sourceEncoding>${encoding.type}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${encoding.type}</project.reporting.outputEncoding>
     </properties>
     <repositories>
         <repository>
@@ -121,7 +120,7 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven-compiler-plugin.version}</version>
                     <configuration>
-                        <release>${jdk-release.version}</release>
+                        <release>${jdk.version}</release>
                         <encoding>${encoding.type}</encoding>
                         <showDeprecation>true</showDeprecation>
                         <showWarnings>true</showWarnings>

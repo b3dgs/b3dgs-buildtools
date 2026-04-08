@@ -49,6 +49,9 @@
         <artifactId>tycho-packaging-plugin</artifactId>
         <versionRange>[1.0,)</versionRange>
         <goals>
+          <goal>package</goal>
+          <goal>package-plugin</goal>
+          <goal>default-package-plugin</goal>
           <goal>build-qualifier-aggregator</goal>
           <goal>validate-version</goal>
           <goal>build-qualifier</goal>
