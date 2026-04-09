@@ -63,7 +63,7 @@
         <maven-resources-plugin.version>3.5.0</maven-resources-plugin.version>
         <maven-release-plugin.version>3.3.1</maven-release-plugin.version>
         <maven-gpg.version>3.2.8</maven-gpg.version>
-        <sonar-maven-plugin>5.5.0.6356</sonar-maven-plugin>
+        <sonar-maven-plugin.version>5.5.0.6356</sonar-maven-plugin.version>
         <maven.compiler.release>${jdk.version}</maven.compiler.release>
         <maven.resources.overwrite>false</maven.resources.overwrite>
         <project.build.sourceEncoding>${encoding.type}</project.build.sourceEncoding>
@@ -189,7 +189,7 @@
                     <plugin>
                         <groupId>org.sonarsource.scanner.maven</groupId>
                         <artifactId>sonar-maven-plugin</artifactId>
-                        <version>${sonar-maven-plugin}</version>
+                        <version>${sonar-maven-plugin.version}</version>
                     </plugin>
                 </plugins>
             </build>
