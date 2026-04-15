@@ -41,6 +41,11 @@ jobs:
             java-version: 17
             distribution: temurin
 
+      -  name: Set up Maven
+         uses: stCarolas/setup-maven@12eb41b233df95d49b0c11fc1b5bc8312e5d4ce0
+         with:
+            maven-version: 3.9.14
+
       -  name: Import GPG
          if: github.event_name == 'push'
          uses: crazy-max/ghaction-import-gpg@2dc316deee8e90f13e1a351ab510b4d5bc0c82cd
@@ -65,8 +70,28 @@ jobs:
       -  name: Sonar
          env:
             SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-         run: mvn clean verify sonar:sonar -B -P "sonar" -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=b3dgs -Dsonar.token=$env:SONAR_TOKEN -Dsonar.projectKey=b3dgs_b3dgs-buildtools
+         run: |
+            mvnArgs = @(
+              "clean",
+              "verify",
+              "sonar:sonar",
+              "-B",
+              "-P",
+             "sonar",
+              "-Dsonar.host.url=https://sonarcloud.io",
+              "-Dsonar.organization=b3dgs",
+              "-Dsonar.token=$env:SONAR_TOKEN",
+              "-Dsonar.projectKey=b3dgs_b3dgs-buildtools"
+            )
+            & mvn @mvnArgs
 
       -  name: Deploy
          if: github.event_name == 'push'
-         run: mvn deploy -B -P "sign"
+         run: |-
+            mvnArgs = @(
+              "deploy",
+              "-B",
+              "-P",
+              "sign"
+            )
+            & mvn @mvnArgs
