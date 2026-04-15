@@ -18,7 +18,7 @@ env:
    MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
 
 jobs:
-   build:
+   ci-cd:
       runs-on: ubuntu-latest
       steps:
 
