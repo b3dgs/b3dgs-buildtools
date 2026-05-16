@@ -42,10 +42,6 @@
         <tag>HEAD</tag>
     </scm>
     <distributionManagement>
-        <repository>
-            <id>central</id>
-            <url>https://central.sonatype.com/repository/maven-releases</url>
-        </repository>
         <snapshotRepository>
             <id>central</id>
             <url>https://central.sonatype.com/repository/maven-snapshots</url>
@@ -187,6 +183,10 @@
             <id>sign</id>
             <build>
                 <plugins>
+                    <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                    </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
