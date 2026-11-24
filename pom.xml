@@ -60,7 +60,7 @@
         <maven-release-plugin.version>3.3.1</maven-release-plugin.version>
         <maven-gpg.version>3.2.8</maven-gpg.version>
         <central-publishing-maven-plugin.version>0.12.0</central-publishing-maven-plugin.version>
-        <sonar-maven-plugin.version>5.5.0.6356</sonar-maven-plugin.version>
+        <sonar-maven-plugin.version>5.9.0.7382</sonar-maven-plugin.version>
         <maven.compiler.release>${jdk.version}</maven.compiler.release>
         <maven.resources.overwrite>false</maven.resources.overwrite>
         <project.build.sourceEncoding>${encoding.type}</project.build.sourceEncoding>
