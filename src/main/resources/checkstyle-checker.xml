@@ -32,9 +32,6 @@
       <property name="severity" value="error"/>
       <property name="accessModifiers" value="protected"/>
     </module>
-    <module name="JavadocStyle">
-      <property name="severity" value="error"/>
-    </module>
     <module name="ConstantName">
       <property name="severity" value="error"/>
     </module>
@@ -243,13 +240,33 @@
       <property name="severity" value="error"/>
     </module>
     <module name="SummaryJavadoc">
-      <property name="severity" value="ignore"/>
-      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+      <property name="severity" value="error"/>
     </module>
     <module name="AtclauseOrder">
       <property name="severity" value="error"/>
     </module>
     <module name="JavadocParagraph">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="JavadocMissingWhitespaceAfterAsterisk">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="JavadocMissingLeadingAsterisk">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="JavadocLeadingAsteriskAlign">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="JavadocContentLocation">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="JavadocBlockTagLocation">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="InvalidJavadocPosition">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="RequireEmptyLineBeforeBlockTagGroup">
       <property name="severity" value="error"/>
     </module>
     <module name="SingleLineJavadoc">
