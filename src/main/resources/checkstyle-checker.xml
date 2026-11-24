@@ -32,7 +32,7 @@
       <property name="severity" value="error"/>
       <property name="accessModifiers" value="protected"/>
     </module>
-    <module name="JavadocStyle">
+    <module name="SummaryJavadoc">
       <property name="severity" value="error"/>
     </module>
     <module name="ConstantName">
